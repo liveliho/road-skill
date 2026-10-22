@@ -1,0 +1,6 @@
+id,title,asset,severity,cvss,epss,kev,internet_exposed,data_sensitive,confidence,cve,source,evidence,status
+F-001,Unauthenticated RCE in VPN,vpn.example.com,critical,9.8,0.73,yes,yes,yes,0.95,CVE-2026-0001,nessus,E-001,confirmed
+F-002,Reflected XSS on search,www.example.com,medium,6.1,0.02,no,yes,no,0.9,CVE-2026-0002,nuclei,E-002,suspected
+F-003,Outdated TLS library,internal.example.com,high,7.5,,no,no,no,0.8,,manual,E-003,suspected
+F-004,Duplicate VPN RCE,vpn.example.com,critical,9.8,0.73,yes,yes,yes,0.95,CVE-2026-0001,manual,E-004,confirmed
+F-005,Anonymous S3 bucket listing,assets.example.com,high,7.5,0.12,no,yes,yes,0.85,CVE-2026-0005,scoutsuite,E-005,confirmed
