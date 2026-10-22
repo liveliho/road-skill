@@ -2,7 +2,20 @@
 
 面向 AI agent 的授权安全审计、漏洞定级、流量/样本分析、事件响应与加固工作流，附带零依赖 Python 工具。入口：[SKILL.md](.dsh/skills/cybersecurity-ops/SKILL.md)。
 
-本项目是可安装的 skill 包，没有需要启动的 Web 服务。GitHub Actions 在 Windows/Linux 上运行测试，通过后构建安装包；版本包见 [Releases](https://github.com/liveliho/road-skill/releases)。
+本项目包含可安装的 Skill 包与纯静态网站。GitHub Actions 在 Windows/Linux 上运行测试，通过后构建安装包；版本包见 [Releases](https://github.com/liveliho/road-skill/releases)。
+
+## 网站工作台
+
+网站提供 11 类工作流、18 份仓库文档的全文搜索、收藏与阅读记录、3 份 Markdown 模板下载，以及浏览器本地 IOC 提取、SHA-256 校验、脱敏和优先级试算。日间 Linux 工作空间搭配 iOS 风格的浮动玻璃工具栏，支持手机、平板和夜间主题；不需要后台或付费 API。
+
+网站入口与部署状态见 [GitHub Pages 发布工作流](https://github.com/liveliho/road-skill/actions/workflows/pages.yml)。网站源码位于 [`website/`](website/README.md)，文档直接从 Skill 的 Markdown 源文件构建。
+
+```bash
+python tools/build_site.py
+python -m http.server 8000 --directory dist/site
+```
+
+访问 `http://localhost:8000`。Pages 配置为 GitHub Actions 后，提交到 `main` 会自动构建发布。网页本地工具是独立轻量实现，不在浏览器中运行 Python CLI，不做主动扫描。
 
 ## 审计与修复
 
