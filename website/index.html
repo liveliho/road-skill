@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="road-skill 网络安全工作台：授权安全工作流、领域手册、证据模板与浏览器本地工具。">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>road-skill · 安全工作台</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./content.js" defer></script>
+  <script src="./tool-core.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳转到主要内容</a>
+  <div class="desktop-bar"><span><span class="desktop-mark"></span> road-skill <span class="desktop-divider">/</span> 安全工作空间</span><span class="desktop-right">本地工具 · 开源手册 <span class="desktop-dot"></span> v1.1.0</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="主导航">
+      <a href="#/" class="brand"><span class="brand-symbol" aria-hidden="true">r<span>_</span></span><span>road-skill<small>网络安全工作台</small></span></a>
+      <button class="search-trigger" data-action="search"><span data-icon="search"></span><span>搜索工作空间</span><kbd>⌘ K</kbd></button>
+      <nav class="primary-nav">
+        <a href="#/" data-nav="home"><span data-icon="dashboard"></span>工作台<span class="nav-active-dot"></span></a>
+        <a href="#/workflows" data-nav="workflows"><span data-icon="workflow"></span>工作流<span class="nav-count">11</span></a>
+        <a href="#/tools" data-nav="tools"><span data-icon="terminal"></span>本地工具<span class="tiny-new">LOCAL</span></a>
+        <a href="#/docs" data-nav="docs"><span data-icon="book"></span>文档中心</a>
+        <a href="#/saved" data-nav="saved"><span data-icon="bookmark"></span>我的收藏<span class="nav-count" id="saved-count">0</span></a>
+      </nav>
+      <div class="sidebar-label">快速开始</div>
+      <nav class="secondary-nav">
+        <a href="#/install"><span data-icon="download"></span>安装 Skill</a>
+        <a href="#/docs/scope"><span data-icon="shield"></span>授权与范围</a>
+        <a href="#/templates"><span data-icon="files"></span>报告与模板</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="workspace-note"><span class="note-icon" data-icon="lock"></span><strong>证据优先，范围明确</strong><p>每一步安全工作，<br>都从一个清晰的问题开始。</p><a href="#/docs/skill">阅读使用原则 <span aria-hidden="true">↗</span></a></div>
+      <a class="repo-link" href="https://github.com/liveliho/road-skill" target="_blank" rel="noopener noreferrer"><span data-icon="github"></span><span>liveliho / road-skill<small>查看源码与参与贡献</small></span><span aria-hidden="true">↗</span></a></div>
+    </aside>
+    <div class="main-shell">
+      <header class="toolbar"><div class="breadcrumb"><button class="icon-button mobile-menu" aria-label="打开导航" aria-expanded="false" aria-controls="mobile-navigation" data-action="menu"><span data-icon="menu"></span></button><span class="home-icon" data-icon="folder"></span><span>工作空间</span><span class="crumb-slash">/</span><strong id="page-label">工作台</strong></div><div class="toolbar-actions"><span class="local-status"><span></span>无需连接服务器</span><button class="icon-button" data-action="theme" aria-label="切换到夜间主题" id="theme-toggle"><span data-icon="sun"></span></button><a class="toolbar-github icon-button" href="https://github.com/liveliho/road-skill" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 查看项目"><span data-icon="github"></span></a><span class="avatar" title="road-skill 工作空间">r.</span></div></header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span><span class="footer-mark">r_</span> 从证据到行动。</span><span>road-skill · <a href="#/sources">设计与开源来源</a><span class="footer-separator">/</span><a href="https://github.com/liveliho/road-skill/issues" target="_blank" rel="noopener noreferrer">反馈问题 ↗</a></span></footer>
+    </div>
+  </div>
+  <dialog id="search-dialog" class="search-dialog" aria-label="搜索文档和工作流"><div class="search-input-row"><span data-icon="search"></span><input id="global-search" type="search" placeholder="搜索手册、命令、模板…" aria-label="搜索关键词" autocomplete="off"><button class="key-button" data-action="close-search" aria-label="关闭搜索">Esc</button></div><div id="search-results"></div><div class="search-footer"><span>输入关键词，搜索仓库中的真实文档</span><span>↵ 打开结果</span></div></dialog>
+  <dialog id="mobile-navigation" class="mobile-navigation" aria-label="网站导航"><div class="mobile-nav-header"><strong>road-skill</strong><button class="icon-button" data-action="close-menu" aria-label="关闭导航"><span data-icon="close"></span></button></div><nav><a href="#/">工作台</a><a href="#/workflows">工作流</a><a href="#/tools">本地工具</a><a href="#/docs">文档中心</a><a href="#/saved">我的收藏</a><a href="#/install">安装 Skill</a><a href="#/templates">报告与模板</a><a href="#/sources">设计与开源来源</a></nav></dialog>
+  <div id="toast" role="status" class="toast"></div>
+</body>
+</html>
